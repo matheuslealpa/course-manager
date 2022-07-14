@@ -28,7 +28,7 @@ export class CourseListComponent implements OnInit{
         price: 108.9,
         code: 'JAR-0125',
         duration: 80,
-        rating: 1,
+        rating: 5,
         releaseDate: 'May 18, 2022'
       }
     ]
