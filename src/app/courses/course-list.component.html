@@ -16,17 +16,17 @@
       <th>Code</th>
       <th>Rating</th>
       <th>release Date</th>
-      <th>desription</th>
+<!--      <th>desription</th>-->
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let course of filteredCourses">
-      <td><img [src]="course.imageUrl" height="35" width="35"></td>
+      <td><img alt="ilustração" [src]="course.imageUrl" height="35" width="35"></td>
       <td>{{course.name}}</td>
       <td>{{course.price}}</td>
-      <td>{{course.code}}</td>
+      <td>{{course.code | replace: '-': ' '}}</td>
       <td><app-star [rating]="course.rating"></app-star></td>
-      <td>{{course.releaseDate}}
+      <td>{{course.releaseDate | date: 'dd/MM/yyyy'}}
     </tr>
 
   </tbody>
